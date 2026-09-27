@@ -162,7 +162,7 @@ const handleChange = (e) => {
             </button>
           </form>
 
-          {error && <p className="text-error">{error}</p>}
+          {error && <p className="text-center text-error">{error}</p>}
 
           <p className="mt-6 text-center text-sm text-muted">
             Don't have an account?
