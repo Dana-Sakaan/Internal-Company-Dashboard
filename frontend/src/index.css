@@ -1,0 +1,53 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Montserrat", sans-serif;
+
+  --color-background: var(--bg);
+  --color-background-secondary: var(--bg-secondary);
+  --color-surface: var(--surface);
+
+  --color-primary: var(--primary);
+  --color-primary-light: var(--primary-light);
+  --color-primary-bright: var(--primary-bright);
+
+  --color-foreground: var(--text);
+  --color-foreground-secondary: var(--text-secondary);
+  --color-muted: var(--text-muted);
+
+  --color-border: var(--border);
+  --color-glow: var(--glow);
+
+  --color-success: var(--success);
+  --color-warning: var(--warning);
+  --color-error: var(--error);
+  --color-info: var(--info);
+
+  --breakpoint-sm: 640px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 1024px;
+  --breakpoint-xl: 1280px;
+  --breakpoint-2xl: 1536px;
+}
+
+:root {
+  --bg: #071420;
+  --bg-secondary: #0b1d30;
+  --surface: #10263d;
+
+  --primary: #0049ac;
+  --primary-light: #5d91c9;
+  --primary-bright: #3b82f6;
+
+  --text: #f5f0e6;
+  --text-secondary: #c7d0da;
+  --text-muted: #8191a3;
+
+  --border: rgba(255, 255, 255, 0.12);
+  --glow: rgba(0, 73, 172, 0.35);
+
+  --success: #22c55e;
+  --warning: #f59e0b;
+  --error: #ef4444;
+  --info: #38bdf8;
+}
