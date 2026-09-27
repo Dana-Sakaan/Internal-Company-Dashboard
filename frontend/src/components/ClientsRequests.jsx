@@ -3,7 +3,7 @@ import axios from "axios";
 import { ClipboardList, ArrowLeft } from "lucide-react";
 import { Link } from "react-router-dom";
 
-const Dashboard = () => {
+const ClientsRequests = () => {
   const [requests, setRequests] = useState([]);
   const [error, setError] = useState("");
   const [successMessage, setSuccessMessage] = useState("");
@@ -69,20 +69,40 @@ const Dashboard = () => {
     <div className="min-h-screen bg-background text-foreground">
       <main className="mx-auto w-full max-w-7xl px-4 py-8 sm:px-6 lg:px-8">
 
-        <div className="mb-8">
-          <Link to="/" className="mb-2 flex text-sm font-medium text-white">
-            <ArrowLeft size={18} />
-            Back
-          </Link>
+        <div className="mb-8 flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
+  <div>
+    <Link to="/" className="mb-2 flex text-sm font-medium text-white">
+      <ArrowLeft size={18} />
+      Back
+    </Link>
 
-          <p className="mb-2 text-sm font-medium text-primary-light">
-            Dashboard
-          </p>
+    <p className="mb-2 text-sm font-medium text-primary-light">
+      Dashboard
+    </p>
 
-          <h2 className="text-2xl font-bold tracking-tight sm:text-3xl">
-            Client Requests
-          </h2>
-        </div>
+    <h2 className="text-2xl font-bold tracking-tight sm:text-3xl">
+      Client Requests
+    </h2>
+  </div>
+
+  <Link
+    to="/create-request"
+    className="
+      inline-flex items-center justify-center
+      rounded-lg
+      bg-primary
+      px-4 py-2.5
+      text-sm font-semibold text-white
+      transition-colors
+      hover:bg-primary-bright
+      focus:outline-none
+      focus:ring-2
+      focus:ring-primary-light
+    "
+  >
+    Create Client Request
+  </Link>
+</div>
 
         {error && (
           <div className="mb-6 rounded-lg border border-red-500/30 bg-red-500/10 px-4 py-3 text-sm text-red-400">
@@ -212,4 +232,4 @@ const Dashboard = () => {
   );
 };
 
-export default Dashboard;
+export default ClientsRequests;
